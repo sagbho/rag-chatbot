@@ -2,12 +2,10 @@ import { embed, embedMany } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { db } from "../db";
 import { cosineDistance, desc, gt, sql } from "drizzle-orm";
-import { embeddings } from "../db/schema/embedding";
+import { embeddings } from "../db/schema/embeddings";
 
 const embeddingModel = openai.embedding("text-embedding-ada-002");
 
-// Break source into smaller chunks
-// Split input string by periods, filtering out empty items
 const generateChunks = (input: string): string[] => {
   return input
     .trim()
