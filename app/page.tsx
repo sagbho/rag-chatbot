@@ -9,11 +9,11 @@ export default function Chat() {
   });
   return (
     <>
-      <div className="flex flex-col w-full max-w-md py-6 mx-auto stretch">
+      <div className="flex flex-col w-full max-w-lg py-6 mx-auto stretch">
         <Header />
-        <div className="space-y-4">
+        <div className="space-y-4 whitespace-pre-wrap max-h-[600px] overflow-auto">
           {messages.map((m) => (
-            <div key={m.id} className="whitespace-pre-wrap">
+            <div key={m.id}>
               <div>
                 <div className="font-bold">
                   {m.role === "user" ? "User" : "Obtineo Customer Support"}
@@ -32,10 +32,10 @@ export default function Chat() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-y-10">
+        <div className="flex flex-col gap-y-10 items-center">
           <form onSubmit={handleSubmit}>
             <input
-              className="fixed bottom-10 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
+              className="bottom-10 w-[400px] max-w-lg p-2 mb-8 border border-gray-300 rounded shadow-xl"
               value={input}
               placeholder="Say anything..."
               onChange={handleInputChange}
