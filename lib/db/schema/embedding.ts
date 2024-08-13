@@ -2,7 +2,7 @@ import { nanoid } from "@/lib/utils";
 import { index, pgTable, text, varchar, vector } from "drizzle-orm/pg-core";
 import { resources } from "./resources";
 
-export const embeddings = pgTable(
+const embeddings = pgTable(
   "embeddings",
   {
     id: varchar("id", { length: 191 })
@@ -22,3 +22,5 @@ export const embeddings = pgTable(
     ),
   })
 );
+
+export default embeddings;
