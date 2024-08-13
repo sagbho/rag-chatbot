@@ -32,10 +32,10 @@ export default function Chat() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-y-10 items-center">
+        <div className="flex flex-col gap-y-10">
           <form onSubmit={handleSubmit}>
             <input
-              className="bottom-10 w-[400px] max-w-lg p-2 mb-8 border border-gray-300 rounded shadow-xl"
+              className="fixed bottom-10 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
               value={input}
               placeholder="Say anything..."
               onChange={handleInputChange}
