@@ -32,14 +32,25 @@ export default function Chat() {
           ))}
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
-            value={input}
-            placeholder="Say anything..."
-            onChange={handleInputChange}
-          />
-        </form>
+        <div className="flex flex-col gap-y-10">
+          <form onSubmit={handleSubmit}>
+            <input
+              className="fixed bottom-10 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
+              value={input}
+              placeholder="Say anything..."
+              onChange={handleInputChange}
+            />
+          </form>
+          <footer className="fixed bottom-0 w-full max-w-md pt-8 mb-4 rounded text-center items-center">
+            <small>
+              &copy; 2024{" "}
+              <a href="https://sagbho.github.io/" className="font-bold">
+                Obtineo.
+              </a>{" "}
+              All rights reserved.
+            </small>
+          </footer>
+        </div>
       </div>
     </>
   );
